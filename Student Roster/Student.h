@@ -1,6 +1,7 @@
 #pragma once
 #include <string>
-
+#include <vector>
+#include "Degree.h"
 using namespace std;
 
 class Student
@@ -27,7 +28,10 @@ public:
 	void addDegreeDays(int a);
 	void changeDegreeDays(int index, int value);
 	
-	//Constructor
-	Student(string StudentID, string firstName, string lastName, string email, int age, int *degreeDays);
+	//Methods
+	Student(vector<string> bulkData);
+	~Student();
+	virtual void print();
+	virtual string getDegreeProgram() { return "No Degree Selected"; };
 };
 

@@ -1,5 +1,6 @@
 #include <string>
 #include <iostream>
+#include <vector>
 #include "Student.h"
 
 //getters
@@ -21,16 +22,19 @@ void Student::addDegreeDays(int a) {
 	cDegreeDays[1] = cDegreeDays[2];
 	cDegreeDays[2] = a;
 }
-void Student::changeDegreeDays(int index, int value) { cDegreeDays[index] = value; }
 
-//Constructor
-Student::Student(string StudentID, string firstName, string lastName, string email, int age, int* degreeDays) {
-	cStudentID = StudentID;
-	cFirstName = firstName;
-	cLastName = lastName;
-	cEmail = email;
-	cAge = age;
-	for (int i = 0; i < 3; i++) {
-		cDegreeDays[i] = degreeDays[i];
-	};
-};
+Student::Student(vector<string> bulkData) {
+	studentID(bulkData[0]);
+	firstName(bulkData[1]);
+	lastName(bulkData[2]);
+	email(bulkData[3]);
+	age(stoi(bulkData[4]));
+	addDegreeDays(stoi(bulkData[5]));
+	addDegreeDays(stoi(bulkData[6]));
+	addDegreeDays(stoi(bulkData[7]));
+}
+
+Student::~Student(){};
+
+void Student::changeDegreeDays(int index, int value) { cDegreeDays[index] = value; }
+void Student::print() {};

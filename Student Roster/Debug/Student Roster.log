@@ -1,2 +1,8 @@
-﻿  Source.cpp
+﻿  NetworkStudent.cpp
+  Roster.cpp
+  SecurityStudent.cpp
+  SoftwareStudent.cpp
+  Source.cpp
+  Student.cpp
+  Generating Code...
   Student Roster.vcxproj -> C:\Users\Leslie\source\repos\Student Roster\Debug\Student Roster.exe
