@@ -23,15 +23,15 @@ void Student::addDegreeDays(int a) {
 	cDegreeDays[2] = a;
 }
 
-Student::Student(vector<string> bulkData) {
-	studentID(bulkData[0]);
-	firstName(bulkData[1]);
-	lastName(bulkData[2]);
-	email(bulkData[3]);
-	age(stoi(bulkData[4]));
-	addDegreeDays(stoi(bulkData[5]));
-	addDegreeDays(stoi(bulkData[6]));
-	addDegreeDays(stoi(bulkData[7]));
+Student::Student(string studentIDA, string firstNameA, string lastNameA, string emailAddressA, int ageA, int daysInCourse1A, int daysInCourse2A, int daysInCourse3A) {
+	studentID(studentIDA);
+	firstName(firstNameA);
+	lastName(lastNameA);
+	email(emailAddressA);
+	age(ageA);
+	addDegreeDays(daysInCourse1A);
+	addDegreeDays(daysInCourse2A);
+	addDegreeDays(daysInCourse3A);
 }
 
 Student::~Student(){};
