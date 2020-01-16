@@ -4,12 +4,12 @@
 #include "Student.h"
 
 //getters
-string Student::studentID() { return cStudentID; }
-string Student::firstName() { return cFirstName; }
-string Student::lastName() { return cLastName; }
-string Student::email() { return cEmail; }
-int Student::age() { return cAge; }
-int Student::getDegreeDays(int a) { return cDegreeDays[a]; }
+string Student::GetStudentID() { return cStudentID; }
+string Student::GetFirstName() { return cFirstName; }
+string Student::GetLastName() { return cLastName; }
+string Student::GetEmail() { return cEmail; }
+int Student::GetAge() { return cAge; }
+int Student::GetDegreeDays(int a) { return cDegreeDays[a]; }
 
 //setters
 void Student::studentID(string a) { cStudentID = a; }

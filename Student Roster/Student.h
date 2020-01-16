@@ -14,10 +14,10 @@ public:
 	//getters
 	string GetStudentID();
 	string GetFirstName();
-	string lastName();
-	string email();
-	int age();
-	int getDegreeDays(int a);
+	string GetLastName();
+	string GetEmail();
+	int GetAge();
+	int GetDegreeDays(int a);
 
 	//Setters
 	void studentID(string a);

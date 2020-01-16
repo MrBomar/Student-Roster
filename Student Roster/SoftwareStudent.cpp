@@ -7,8 +7,8 @@ Degree SoftwareStudent::degree() {
 };
 
 void SoftwareStudent::print() {
-	cout << studentID() << "\tFirst Name: " << firstName() << "\tLast Name: " << lastName() << "\tAge: " << age() << " \tDays in course: {"
-		<< getDegreeDays(0) << ", " << getDegreeDays(1) << ", " << getDegreeDays(2) << "}\tDegree Program: " << getDegreeProgram() << endl;
+	cout << GetStudentID() << "\tFirst Name: " << GetFirstName() << "\tLast Name: " << GetLastName() << "\tAge: " << GetAge() << " \tDays in course: {"
+		<< GetDegreeDays(0) << ", " << GetDegreeDays(1) << ", " << GetDegreeDays(2) << "}\tDegree Program: " << getDegreeProgram() << endl;
 }
 
 string SoftwareStudent::getDegreeProgram() {
