@@ -176,11 +176,10 @@ void Roster::remove(string ID) {
 };
 
 bool Roster::validEmail(string studentEmail) {
-	if (studentEmail.find('@') != 4294967295 && studentEmail.find('.') != 4294967295) {
+	if (studentEmail.find('@') != 4294967295 && 
+		studentEmail.find('.') != 4294967295 &&
+		studentEmail.find(' ') == 4294967295) {
 		return true;
-	}
-	else if (studentEmail.find(' ') == 4294967295) {
-		return false;
 	}
 	else {
 		return false;

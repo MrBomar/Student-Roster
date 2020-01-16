@@ -12,8 +12,8 @@ protected:
 
 public:
 	//getters
-	string studentID();
-	string firstName();
+	string GetStudentID();
+	string GetFirstName();
 	string lastName();
 	string email();
 	int age();
