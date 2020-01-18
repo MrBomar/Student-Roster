@@ -7,8 +7,8 @@ Degree NetworkStudent::degree() {
 };
 
 void NetworkStudent::print() {
-	cout << GetStudentID() << "\tFirst Name: " << GetFirstName() << "\tLast Name: " << GetLastName() << "\tAge: " << GetAge() << " \tDays in course: {"
-		<< GetDegreeDays(0) << ", " << GetDegreeDays(1) << ", " << GetDegreeDays(2) << "}\tDegree Program: " << getDegreeProgram() << endl;
+	cout << getStudentID() << "\tFirst Name: " << getFirstName() << "\tLast Name: " << getLastName() << "\tAge: " << getAge() << " \tDays in course: {"
+		<< getDegreeDay()[0] << ", " << getDegreeDay()[1] << ", " << getDegreeDay()[2] << "}\tDegree Program: " << getDegreeProgram() << endl;
 };
 
 string NetworkStudent::getDegreeProgram() {

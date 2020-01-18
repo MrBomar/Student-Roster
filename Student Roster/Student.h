@@ -12,21 +12,20 @@ protected:
 
 public:
 	//getters
-	string GetStudentID();
-	string GetFirstName();
-	string GetLastName();
-	string GetEmail();
-	int GetAge();
-	int GetDegreeDays(int a);
+	string getStudentID();
+	string getFirstName();
+	string getLastName();
+	string getEmail();
+	int getAge();
+	int* getDegreeDay();
 
 	//Setters
-	void studentID(string a);
-	void firstName(string a);
-	void lastName(string a);
-	void email(string a);
-	void age(int a);
-	void addDegreeDays(int a);
-	void changeDegreeDays(int index, int value);
+	void setStudentID(string a);
+	void setFirstName(string a);
+	void setLastName(string a);
+	void setEmail(string a);
+	void setAge(int a);
+	int* setDegreeDay();
 	
 	//Methods
 	Student(string studentID, string firstName, string lastName, string emailAddress, int age, int daysInCourse1, int daysInCourse2, int daysInCourse3);

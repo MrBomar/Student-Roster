@@ -51,27 +51,27 @@ void Roster::printAverageDaysInCourse(string ID) {
 	for (int i = 0; i < arrayPosition; i++) {
 		switch (classRosterDegree[i]) {
 		case NETWORK:
-			if (static_cast<NetworkStudent*>(classRosterArray[i])->GetStudentID() == ID) {
-				int a = static_cast<NetworkStudent*>(classRosterArray[i])->GetDegreeDays(0);
-				int b = static_cast<NetworkStudent*>(classRosterArray[i])->GetDegreeDays(1);
-				int c = static_cast<NetworkStudent*>(classRosterArray[i])->GetDegreeDays(2);
-				cout << static_cast<NetworkStudent*>(classRosterArray[i])->GetStudentID() << "\t" << (a + b + c) / 3 << endl;
+			if (static_cast<NetworkStudent*>(classRosterArray[i])->getStudentID() == ID) {
+				int a = static_cast<NetworkStudent*>(classRosterArray[i])->getDegreeDay()[0];
+				int b = static_cast<NetworkStudent*>(classRosterArray[i])->getDegreeDay()[1];
+				int c = static_cast<NetworkStudent*>(classRosterArray[i])->getDegreeDay()[2];
+				cout << static_cast<NetworkStudent*>(classRosterArray[i])->getStudentID() << "\t" << (a + b + c) / 3 << endl;
 			}
 			break;
 		case SOFTWARE:
-			if (static_cast<SoftwareStudent*>(classRosterArray[i])->GetStudentID() == ID) {
-				int a = static_cast<SoftwareStudent*>(classRosterArray[i])->GetDegreeDays(0);
-				int b = static_cast<SoftwareStudent*>(classRosterArray[i])->GetDegreeDays(1);
-				int c = static_cast<SoftwareStudent*>(classRosterArray[i])->GetDegreeDays(2);
-				cout << static_cast<SoftwareStudent*>(classRosterArray[i])->GetStudentID() << "\t" << (a + b + c) / 3 << endl;
+			if (static_cast<SoftwareStudent*>(classRosterArray[i])->getStudentID() == ID) {
+				int a = static_cast<SoftwareStudent*>(classRosterArray[i])->getDegreeDay()[0];
+				int b = static_cast<SoftwareStudent*>(classRosterArray[i])->getDegreeDay()[1];
+				int c = static_cast<SoftwareStudent*>(classRosterArray[i])->getDegreeDay()[2];
+				cout << static_cast<SoftwareStudent*>(classRosterArray[i])->getStudentID() << "\t" << (a + b + c) / 3 << endl;
 			}
 			break;
 		case SECURITY:
-			if (static_cast<SecurityStudent*>(classRosterArray[i])->GetStudentID() == ID) {
-				int a = static_cast<SecurityStudent*>(classRosterArray[i])->GetDegreeDays(0);
-				int b = static_cast<SecurityStudent*>(classRosterArray[i])->GetDegreeDays(1);
-				int c = static_cast<SecurityStudent*>(classRosterArray[i])->GetDegreeDays(2);
-				cout << static_cast<SecurityStudent*>(classRosterArray[i])->GetStudentID() << "\t" << (a + b + c) / 3 << endl;
+			if (static_cast<SecurityStudent*>(classRosterArray[i])->getStudentID() == ID) {
+				int a = static_cast<SecurityStudent*>(classRosterArray[i])->getDegreeDay()[0];
+				int b = static_cast<SecurityStudent*>(classRosterArray[i])->getDegreeDay()[1];
+				int c = static_cast<SecurityStudent*>(classRosterArray[i])->getDegreeDay()[2];
+				cout << static_cast<SecurityStudent*>(classRosterArray[i])->getStudentID() << "\t" << (a + b + c) / 3 << endl;
 			}
 			break;
 		default:
@@ -110,18 +110,18 @@ void Roster::printInvalidEmails() {
 	for (int i = 0; i < arrayPosition; i++) {
 		switch (classRosterDegree[i]) {
 		case NETWORK:
-			if (!validEmail(static_cast<NetworkStudent*>(classRosterArray[i])->GetEmail())) {
-				cout << static_cast<NetworkStudent*>(classRosterArray[i])->GetEmail() << endl;
+			if (!validEmail(static_cast<NetworkStudent*>(classRosterArray[i])->getEmail())) {
+				cout << static_cast<NetworkStudent*>(classRosterArray[i])->getEmail() << endl;
 			}
 			break;
 		case SOFTWARE:
-			if (!validEmail(static_cast<SoftwareStudent*>(classRosterArray[i])->GetEmail())) {
-				cout << static_cast<SoftwareStudent*>(classRosterArray[i])->GetEmail() << endl;
+			if (!validEmail(static_cast<SoftwareStudent*>(classRosterArray[i])->getEmail())) {
+				cout << static_cast<SoftwareStudent*>(classRosterArray[i])->getEmail() << endl;
 			}
 			break;
 		case SECURITY:
-			if (!validEmail(static_cast<SecurityStudent*>(classRosterArray[i])->GetEmail())) {
-				cout << static_cast<SecurityStudent*> (classRosterArray[i])->GetEmail() << endl;
+			if (!validEmail(static_cast<SecurityStudent*>(classRosterArray[i])->getEmail())) {
+				cout << static_cast<SecurityStudent*> (classRosterArray[i])->getEmail() << endl;
 			}
 			break;
 		default:
@@ -140,13 +140,13 @@ void Roster::remove(string ID) {
 	for (int i = 0; i < arrayPosition; i++) {
 		switch (classRosterDegree[i]) {
 		case NETWORK:
-			if (static_cast<NetworkStudent*>(classRosterArray[i])->GetStudentID() == ID) { rosterPOS = i; }
+			if (static_cast<NetworkStudent*>(classRosterArray[i])->getStudentID() == ID) { rosterPOS = i; }
 			break;
 		case SOFTWARE:
-			if (static_cast<SoftwareStudent*>(classRosterArray[i])->GetStudentID() == ID) { rosterPOS = i; }
+			if (static_cast<SoftwareStudent*>(classRosterArray[i])->getStudentID() == ID) { rosterPOS = i; }
 			break;
 		case SECURITY:
-			if (static_cast<SecurityStudent*>(classRosterArray[i])->GetStudentID() == ID) { rosterPOS = i; }
+			if (static_cast<SecurityStudent*>(classRosterArray[i])->getStudentID() == ID) { rosterPOS = i; }
 			break;
 		default:
 			cout << "Error" << endl;
